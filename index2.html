@@ -104,35 +104,19 @@
         <hr>
 
         <!-- Project Two -->
-        <div class="row">
-            <div class="col-md-7">
+         <div class="row three">
+            <div class="col-md-7 imgfilme">
                 <a href="#">
-                    <img class="img-responsive" src="http://placehold.it/700x300" alt="">
+                    <!--<img class="img-responsive" src="http://ia.media-imdb.com/images/M/MV5BMTgzNTA4MTc3OF5BMl5BanBnXkFtZTcwOTA0ODk0MQ@@._V1_SX300.jpg" alt="movie1" > -->
                 </a>
             </div>
             <div class="col-md-5">
-                <h3 class="idfilme2"></h3>
-                <h4>Subheading</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, odit velit cumque vero doloremque repellendus distinctio maiores rem expedita a nam vitae modi quidem similique ducimus! Velit, esse totam tempore.</p>
+                <h3 class="idfilme"></h3>
+                <h4 class="idano"></h4>
+                <p class="idinfo"></p>
             </div>
         </div>
-        <!-- /.row -->
-
-        <hr>
-
-        <!-- Project Three -->
-        <div class="row">
-            <div class="col-md-7">
-                <a href="#">
-                    <img class="img-responsive" src="http://placehold.it/700x300" alt="">
-                </a>
-            </div>
-            <div class="col-md-5">
-                <h3>Filme 3</h3>
-                <h4>Subheading</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, temporibus, dolores, at, praesentium ut unde repudiandae voluptatum sit ab debitis suscipit fugiat natus velit excepturi amet commodi deleniti alias possimus!</p>
-            </div>
-        </div>
+          
         <!-- /.row -->
 
         <hr>
@@ -187,11 +171,13 @@ function verfilme(orig, dest){
             orig = "http://www.omdbapi.com/?t=50&y=&plot=short&r=json";
 
           verfilme(orig, '.two')
+
+          orig = "http://www.omdbapi.com/?t=300&y=&plot=short&r=json";
+
+          verfilme(orig, '.three')
             /*orig2 = "http://www.omdbapi.com/?t=50&y=&plot=short&r=json";
              $.getJSON(orig2, function( data ) {
             $( ".idfilme2" ).append( '<h1>' + data["Title"] + '</h1>');*/
     </script>
 
-
-Title
 </html>
