@@ -1,10 +1,197 @@
-<html>
-	<head>
-		<meta charset="utf-8">
-		<title>Cinema Bootstrap</title>
+<!DOCTYPE html>
+<html lang="en">
 
-		<link rel="stylesheet" type="text/css" href="css/estilos2.css">
-		<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
-	</head>
+<head>
 
-	<body>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Tudo Sobre Cinema</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/1-col-portfolio.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Tudo Sobre Cinema</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="#">Filmes</a>
+                    </li>
+                    <li>
+                        <a href="#">Reservas</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <!-- Page Heading -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">
+                    Listagem de Filmes
+                </h1>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Project One -->
+        <div class="row one">
+            <div class="col-md-7 imgfilme">
+                <a href="#">
+                    <!--<img class="img-responsive" src="http://ia.media-imdb.com/images/M/MV5BMTgzNTA4MTc3OF5BMl5BanBnXkFtZTcwOTA0ODk0MQ@@._V1_SX300.jpg" alt="movie1" > -->
+                </a>
+            </div>
+            <div class="col-md-5">
+                <h3 class="idfilme"></h3>
+                <h4 class="idano"></h4>
+                <p class="idinfo"></p>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <hr>
+
+
+        <!-- Project One -->
+        <div class="row two">
+            <div class="col-md-7 imgfilme">
+                <a href="#">
+                    <!--<img class="img-responsive" src="http://ia.media-imdb.com/images/M/MV5BMTgzNTA4MTc3OF5BMl5BanBnXkFtZTcwOTA0ODk0MQ@@._V1_SX300.jpg" alt="movie1" > -->
+                </a>
+            </div>
+            <div class="col-md-5">
+                <h3 class="idfilme"></h3>
+                <h4 class="idano"></h4>
+                <p class="idinfo"></p>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <hr>
+
+        <!-- Project Two -->
+        <div class="row">
+            <div class="col-md-7">
+                <a href="#">
+                    <img class="img-responsive" src="http://placehold.it/700x300" alt="">
+                </a>
+            </div>
+            <div class="col-md-5">
+                <h3 class="idfilme2"></h3>
+                <h4>Subheading</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, odit velit cumque vero doloremque repellendus distinctio maiores rem expedita a nam vitae modi quidem similique ducimus! Velit, esse totam tempore.</p>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <hr>
+
+        <!-- Project Three -->
+        <div class="row">
+            <div class="col-md-7">
+                <a href="#">
+                    <img class="img-responsive" src="http://placehold.it/700x300" alt="">
+                </a>
+            </div>
+            <div class="col-md-5">
+                <h3>Filme 3</h3>
+                <h4>Subheading</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, temporibus, dolores, at, praesentium ut unde repudiandae voluptatum sit ab debitis suscipit fugiat natus velit excepturi amet commodi deleniti alias possimus!</p>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <hr>
+
+       
+        <!-- /.row -->
+
+        <hr>
+
+        <!-- Pagination -->
+        <!-- /.row -->
+
+        <hr>
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Todos os direitos de autor reservados a  Miguel Ferreira &copy; 2015</p>
+                </div>
+            </div>
+            <!-- /.row -->
+        </footer>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+</body>
+
+    <script>
+function verfilme(orig, dest){
+
+      $.getJSON(orig, function( data ) {
+            $( dest +" .idfilme" ).append( '<h1>' + data["Title"] + '</h1>');
+            $( dest +" .idano" ).append( '<h2>' + data["Year"] + '</h2>');
+            $(  dest +" .idinfo" ).append( '<h3>' + data["Plot"] + '</h3>');
+            $(  dest +" .imgfilme" ).append( '<img src="' +data["Poster"]+'">' );
+            });
+}
+        
+            orig = "http://www.omdbapi.com/?t=war&y=&plot=short&r=json";
+
+          verfilme(orig, '.one')
+
+
+            orig = "http://www.omdbapi.com/?t=50&y=&plot=short&r=json";
+
+          verfilme(orig, '.two')
+            /*orig2 = "http://www.omdbapi.com/?t=50&y=&plot=short&r=json";
+             $.getJSON(orig2, function( data ) {
+            $( ".idfilme2" ).append( '<h1>' + data["Title"] + '</h1>');*/
+    </script>
+
+
+Title
+</html>
